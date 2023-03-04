@@ -1,2 +1,3 @@
 # Secret file
+node_modules
 .env

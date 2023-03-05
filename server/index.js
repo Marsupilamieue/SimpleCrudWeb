@@ -24,7 +24,8 @@ app.use(express.json());
 
 app.use("/api/users", UserRouter);
 
-app.listen(3000, () => {
-  connect();
-  console.log("Servidor rodando na porta 3000");
-});
+if (process.env.API_PORT) {
+  app.listen(process.env.API_PORT);
+}
+
+module.exports = app;
